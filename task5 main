@@ -1,0 +1,24 @@
+#include<iostream>
+#include "range.h"
+using namespace std;
+
+int main() {
+
+    compare<int> obj(1,100);
+
+    cout << "integer range 1 to 100:" << endl;
+    cout << "is 50 in range: " << obj.contains(50) << endl << endl;
+
+
+    compare<float> obj2(1.5,77.6);
+
+    cout << "float range from 1.5 to 77.6:" << endl;
+    cout << "is 80 in range: " << obj2.contains(80) << endl << endl;
+
+
+    compare<char> obj3('A','Z');
+
+    cout << "char range from A to Z:" << endl;
+    cout << "is M in range: " << obj3.contains('M') << endl;
+
+}
