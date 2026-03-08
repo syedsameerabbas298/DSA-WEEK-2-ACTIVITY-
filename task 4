@@ -1,0 +1,44 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+template <typename t>
+
+class compare {
+public:
+	t num1;
+	t num2;
+	compare(t a,t b):num1(a),num2(b){}
+	
+	bool contains(t a)
+	{
+		if (a >= num1 && a <= num2)
+		{
+			return true;
+		}
+		else
+			return false;
+	}
+
+};
+
+int main() {
+	bool flag = true;
+
+	compare<int>obj(1, 100);
+	cout << "integer range 1 to 100: " << endl;
+	cout << "is 50 is in range: " << obj.contains(50) << endl<<endl;
+
+	compare<float>obj2(1.5, 77.6);
+	cout << "float range from 1.5 to 77.6:" << endl;
+	cout << "is 80 is in range: " << obj2.contains(80) << endl<<endl;
+
+	compare<char>obj3('A', 'Z');
+	cout << "char range from A to Z:" << endl;
+	cout << "is M is in range: " << obj3.contains('M') << endl;
+
+
+
+
+}
