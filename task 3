@@ -1,0 +1,49 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+template <typename t>
+
+class compare {
+public:
+	t num1;
+	t num2;
+	compare(t a,t b):num1(a),num2(b){}
+	
+	bool isgreater() {
+		return num1 > num2;
+		
+	}
+
+	bool isless() {
+		return num1 < num2;
+		
+	}
+
+	bool isequal() {
+		return num1 == num2;	
+	}
+
+	void display() {
+		
+		
+	}
+
+};
+
+int main() {
+	bool flag = true;
+	compare<int>obj(1,2);
+
+	cout << "is num1 greater " << obj.isgreater() << endl;
+	cout << "is num1 less " << obj.isless() << endl;
+	cout << "are equal " << obj.isequal() << endl << endl;
+
+	compare<double>obj1(0.557, -0.768);
+
+	cout << "is num1 greater " << obj1.isgreater() << endl;
+	cout << "is num1 less " << obj1.isless() << endl;
+	cout << "are equal " << obj1.isequal() << endl << endl;
+
+}
