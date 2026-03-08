@@ -1,0 +1,29 @@
+#ifndef RANGE_H
+#define RANGE_H
+
+template <typename T>
+
+class compare
+{
+private:
+    T num1;
+    T num2;
+
+public:
+
+    compare(T a, T b)
+    {
+        num1 = a;
+        num2 = b;
+    }
+
+    bool contains(T value)
+    {
+        if (value >= num1 && value <= num2)
+            return true;
+        else
+            return false;
+    }
+};
+
+#endif
