@@ -1,0 +1,46 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+template <typename t>
+
+class counter {
+public:
+
+	t num;
+	int temp;
+	counter(t a) :num(a) { temp = 0; }
+
+	t getvalue() {
+
+		return num++;
+	}
+	void display() {
+		
+		cout << "value after " << temp << " increment " << getvalue() << endl;
+		temp++;
+	}
+
+};
+
+int main() {
+	cout << "integer counter: " << endl;
+	counter<int> obj(5);
+	obj.display();
+	obj.display();
+	obj.display();
+	cout << endl;
+	cout << "integer counter: " << endl;
+	counter<float> obj1(1.2);
+	obj1.display();
+	obj1.display();
+	obj1.display();
+	cout << "integer counter: " << endl;
+	cout << endl;
+	counter<double> obj2(0.5);
+	obj2.display();
+	obj2.display();
+	obj2.display();
+
+}
